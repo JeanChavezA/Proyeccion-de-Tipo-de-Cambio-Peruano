@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 26 11:06:55 2024
+
+@author: RIPLEY MIRAFLORES
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import itertools
@@ -106,7 +113,7 @@ else:
         forecast_series = pd.Series(forecast.predicted_mean, index=forecast_index)
         
         # Guardar la proyección en un archivo CSV
-        forecast_series.to_csv('C:/Users/RIPLEY MIRAFLORES/ProyectoTipodeCambio/proyeccion_tipo_cambio.csv', header=['Tipo_Cambio_Proyectado'])
+        forecast_series.to_csv('C:/Users/RIPLEY MIRAFLORES/ProyectoTipodeCambio/proyeccion_tipo_cambio_sarimax.csv', header=['Tipo_Cambio_Proyectado'])
 
         # Visualizar la serie temporal y la proyección
         plt.figure(figsize=(10, 6))
@@ -120,7 +127,3 @@ else:
 
     else:
         print("No se encontraron parámetros adecuados.")
-
-
-
-
